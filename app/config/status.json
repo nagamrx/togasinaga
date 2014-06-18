@@ -1,0 +1,31 @@
+{
+  	"promotion":{
+  		"0": ["POST", "Post"],
+  		"1": ["BLOG", "Blog"],
+  		"2": ["STATIC", "Static"]
+  	},
+  	"supply":{
+  		"0": ["NA", "Not Available"],
+  		"1": ["BEFORE_CO", "Before Check Out"],
+  		"2": ["AFTER_CO", "After Check Out"],
+  		"3": ["PAID", "Paid"],
+  		"4": ["SENDING", "Sending"],
+  		"5": ["SENT", "Sent"],
+  		"6": ["REQ_REF", "Request for Refund"],
+  		"7": ["REFUND", "Refund"]
+  	},
+  	"order":{
+  		"0": ["NA", "Not Available"],
+  		"1": ["BEFORE_CO", "Before Check Out"],
+  		"2": ["AFTER_CO", "After Check Out"],
+  		"3": ["PAID", "Paid"],
+  		"4": ["SENDING", "Sending"],
+  		"5": ["SENT", "Sent"],
+  		"6": ["REQ_REF", "Request for Refund"],
+  		"7": ["REFUND", "Refund"]
+  	},
+    "payment":{
+      "0": ["CC", "Credit Card"],
+      "1": ["CASH", "Cash"]
+    }
+}
