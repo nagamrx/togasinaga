@@ -9,8 +9,8 @@
     <!-- Bootstrap 3-->
     <link href="{{asset('landing/css/bootstrap.min.css')}}" rel="stylesheet" media="screen">
     <!-- Google Fonts -->
-    <link href="{{asset('landing/css/sanspro-font.min.css')}}" rel='stylesheet' type='text/css'>
-    <link href="{{asset('landing/css/roboto-font.min.css')}}" rel='stylesheet' type='text/css'>
+    <link href="{{asset('landing/css/sanspro-font.css')}}" rel='stylesheet' type='text/css'>
+    <link href="{{asset('landing/css/roboto-font.css')}}" rel='stylesheet' type='text/css'>
     <!-- Template Styles -->
     <link href="{{asset('landing/css/style.css')}}" rel="stylesheet" media="screen">
       </head>
@@ -29,15 +29,16 @@
 			    </button>
 			    
 			    <!--Replace text with your app name or logo image-->
-			    <a class="navbar-brand" href="#">Landy</a>
+			    <a class="navbar-brand" href="#">Togasinaga</a>
 			    
 			  </div>
 			  <div class="collapse navbar-collapse navbar-ex1-collapse">
 			    <ul class="nav navbar-nav">
-			      <li><a onclick="$('header').animatescroll({padding:71});">Start</a></li>
-			      <li><a onclick="$('.detail').animatescroll({padding:71});">Screens</a></li>
-			      <li><a onclick="$('.features').animatescroll({padding:71});">Features</a></li>
-			      <li><a onclick="$('.social').animatescroll({padding:71});">Social	</a></li>
+			      <li><a onclick="$('header').animatescroll({padding:71});">Kembali ke Awal</a></li>
+			      <li><a onclick="$('.detail').animatescroll({padding:71});">Fitur</a></li>
+			      <li><a onclick="$('.features').animatescroll({padding:71});">Pengelola</a></li>
+			      <li><a onclick="$('.social').animatescroll({padding:71});">Media Sosial</a></li>
+			      <li><a onclick="$('.get-it').animatescroll({padding:71});">Info lebih Lanjut</a></li>
 			    </ul>
 			  </div>
 		  </div>
@@ -50,34 +51,10 @@
 		 <div class="container">
 			 <div class="row">
 				 <div class="col-md-12">
-					  <h1>Hello World!</h1>
-					  <p class="lead">This is an Awesome App Landing Page</p>
-					  
-					  <div class="carousel-iphone">
-					  	<div id="carousel-example-generic" class="carousel slide">
-					    
-					    <!-- Indicators -->
-					    <ol class="carousel-indicators">
-					      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					    </ol>
-					  
-					    <!-- Wrapper for slides -->
-					    <div class="carousel-inner">
-					      <div class="item active">
-					        <img src="img/screenshots/app-1.png" alt="App Screen 1">
-					      </div>
-					      <div class="item">
-					        <img src="img/screenshots/app-2.png" alt="App Screen 2">
-					      </div>
-					      <div class="item">
-					        <img src="img/screenshots/app-3.png" alt="App Screen 3">
-					      </div>
-					      
-					    </div>
-					  </div>
-					</div>
+					  <h1>TOGA SINAGA</h1>
+					  <p class="lead">Jembatan komunikasi di tengah komunitas Pomparan Toga Sinaga dohot Boruna</p>
+					  <a href="#" class="btn btn-primary btn-lg"> Log in</a>	
+					  <a href="#" class="btn btn-primary btn-lg"> Sign Up</a>
 				</div>	  
 			</div>    
 		</div>
@@ -90,9 +67,7 @@
 		  <div class="container">
 			  <div class="row">
 				  <div class="col-md-offset-2 col-md-8">
-					 <h1>Everything's easily customizable.</h1>
-					 	    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-					 	    <button type="button" class="app-store"></button>	
+					 <h1><i>"Mari bersama membangun Jejaring Sosial sebagai media komunikasi serta pengumpulan data untuk mempererat hubungan dan memperluas wawasan di antara pomparan Toga Sinaga"</i></h1>
 				  </div>
 			  </div>
 		  </div>
@@ -102,13 +77,6 @@
 	  <!-- PAYOFF 
 	      ================================================== -->
 	  <section class="payoff">
-		<div class="container">
-			  <div class="row">
-				  <div class="col-md-12">
-					  <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</h1>
-				  </div>
-			  </div>
-		  </div>	  
 	  </section>
 	  
 	  
@@ -125,12 +93,12 @@
 					    <div class="item active">
 					      	<div class="row">
 					      		<div class="col-sm-12 col-md-offset-1 col-md-6">
-					      			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
-					      			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+					      			<h1>Jejaring Sosial</h1>
+					      			<p>Berkomunikasi dengan Anggota PPTSB lainnya dan menulis Blog pribadi Anda.</p>
 					      		</div>
 					      		<div class="col-sm-12 col-md-5">
 					      			<div class="app-screenshot">
-					      				<img src="img/screenshots/app-1.png" class="img-responsive" alt="App Screen 1">
+
 					      			</div>
 					      		</div>
 					      	</div>
@@ -138,12 +106,12 @@
 					    <div class="item">
 					    	<div class="row">
 					    		<div class="col-sm-12 col-md-offset-1 col-md-6">
-					    			<h1>Sed do eiusmod tempor incididunt ut labore et dolore magna.</h1>
-					    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+					    			<h1>Tarombo</h1>
+					    			<p>Temukan posisi Anda dalam silsilah keluarga Marga Sinaga</p>
 					    		</div>
 					    		<div class="col-sm-12 col-md-5">
 					    			<div class="app-screenshot">
-					    				<img src="img/screenshots/app-2.png" class="img-responsive" alt="App Screen 2">
+					    				
 					    			</div>
 					    		</div>
 					    	</div>
@@ -151,12 +119,12 @@
 					    <div class="item">
 					      <div class="row">
 					      	<div class="col-sm-12 col-md-offset-1 col-md-6">
-					      		<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
-					      		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+					      		<h1>Pustaka</h1>
+					      		<p>Dokumentasi online tentang Statuta dan Sejarah PPTSB</p>
 					      	</div>
 					      	<div class="col-sm-12 col-md-5">
 					      		<div class="app-screenshot">
-					      			<img src="img/screenshots/app-3.png" class="img-responsive" alt="App Screen 3">
+					      			
 					      		</div>
 					      	</div>
 					      </div>
@@ -182,23 +150,12 @@
 		  <div class="container">
 			  <div class="row">
 				
-				  <div class="col-md-4">
+				  <div class="col-md-12">
 					  <div class="circle"><i class="icon-bookmark"></i></div>
-					  <h2>Quick &amp; Easy Setup</h2>
-					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+					  <h2>Pengelola</h2>
+					  <p>Domain ini adalah milik dan dibawah pengelolaan PPTSB Dewan Pengurus Wilayah (DPW) Propinsi Riau.</p>
 				  </div>
 				
-				  <div class="col-md-4">
-					  <div class="circle"><i class="icon-keypad"></i></div>
-					  <h2>Parallax Scrolling</h2>
-					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-				  </div>
-				 
-				  <div class="col-md-4">
-					  <div class="circle"><i class="icon-like"></i></div>
-					  <h2>Responsive Design</h2>
-					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-				  </div>
 				  
 			  </div>
 		  </div>
@@ -211,12 +168,10 @@
 	  	<div class="container">
 	  		  <div class="row">
 	  			  <div class="col-md-12">
-	  			  	<h2>Connect with us</h2>
+	  			  	<h2>Ikuti akun-akun Togasinaga lainnya</h2>
 	  			   	<a class="icon-facebook"></a>
 	  			   	<a class="icon-twitter"></a>
-	  			   	<a class="icon-google"></a>
 	  			   	<a class="icon-instagram"></a>
-	  			   	<a class="icon-pinterest"></a>
 	  			   </div>
 	  		  </div>
 	  	  </div>	  
@@ -229,9 +184,8 @@
 	  	<div class="container">
 	  		<div class="row">
 	  			<div class="col-md-12">
-	  				<h1>Avaialable now on the App Store</h1>
-	  				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-	  				<button type="button" class="app-store"></button>
+	  				<h1>Untuk informasi lebih lanjut</h1>
+	  				<p class="lead">Hubungi <b>info@togasinaga.com</b> melalui email</p>
 	  			</div>
 	  			<div class="col-md-12">
 	  				<hr />
@@ -255,6 +209,6 @@
     <script src="{{asset('landing/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('landing/js/animatescroll.js')}}"></script>
     <script src="{{asset('landing/js/scripts.js')}}"></script>
-    <script src="{{asset('landing/js/retina-1.1.0.min.js')}}"></script>
+    <script src="{{asset('landing/js/retina.min.js')}}"></script>
   	
 </html>
