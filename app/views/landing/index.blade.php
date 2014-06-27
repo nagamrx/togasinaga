@@ -53,7 +53,7 @@
 				 <div class="col-md-12">
 					  <h1>TOGA SINAGA</h1>
 					  <p class="lead">Jembatan komunikasi di tengah komunitas Pomparan Toga Sinaga dohot Boruna</p>
-					  <a href="#" class="btn btn-primary btn-lg"> Log in</a>	
+					  <a href="{{url('cobalogin')}}" class="btn btn-primary btn-lg"> Log in</a>	
 					  <a href="#" class="btn btn-primary btn-lg"> Sign Up</a>
 				</div>	  
 			</div>    
