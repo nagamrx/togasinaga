@@ -95,3 +95,5 @@ Route::get('fixadmin', function(){
 
 	return "OK!";
 });*/
+
+Route::get('cobalogin', 'CobaController@getCobalogin');

@@ -6,7 +6,7 @@ use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends GenericModel implements UserInterface,RemindableInterface{
-
+//ini yang papa rubah...........
 	use UserTrait, RemindableTrait;
 
 	public $table = 'users';
