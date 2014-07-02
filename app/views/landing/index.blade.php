@@ -34,7 +34,7 @@
 			  </div>
 			  <div class="collapse navbar-collapse navbar-ex1-collapse">
 			    <ul class="nav navbar-nav">
-			      <li><a onclick="$('header').animatescroll({padding:71});">Kembali ke Awal</a></li>
+			      <li><a onclick="$('header').animatescroll({padding:71});">Masuk / Daftar</a></li>
 			      <li><a onclick="$('.detail').animatescroll({padding:71});">Fitur</a></li>
 			      <li><a onclick="$('.features').animatescroll({padding:71});">Pengelola</a></li>
 			      <li><a onclick="$('.social').animatescroll({padding:71});">Media Sosial</a></li>
@@ -51,16 +51,72 @@
 		 <div class="container">
 			 <div class="row">
 				 <div class="col-md-12">
-					  <h1>TOGA SINAGA</h1>
-					  <p class="lead">Jembatan komunikasi di tengah komunitas Pomparan Toga Sinaga dohot Boruna</p>
-					  <a href="#" class="btn btn-primary btn-lg"> Log in</a>	
-					  <a href="#" class="btn btn-primary btn-lg"> Sign Up</a>
+					  	<h1>TOGA SINAGA</h1>
+					  	<p class="lead">Jembatan komunikasi di tengah komunitas Pomparan Toga Sinaga dohot Boruna</p>
+					  	{{Form::open(['route'=>'sessions.store','class'=>'form-inline'])}}
+						  <div class="form-group">
+							{{Form::label('email','Email')}}
+						  </div>
+						  <div class="form-group">
+							{{Form::text('email',null, [
+								'class'=>'form-control',
+								'id'=>'exampleInputEmail2'
+							])}}
+						  </div>
+						  <div class="form-group">
+							{{Form::label('password','Password')}}
+						  </div>
+						  <div class="form-group">
+						    {{Form::password('password', [
+								'class'=>'form-control',
+								'id'=>'exampleInputPassword2'
+							])}}
+						  </div>
+						  <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+						</form>
+					  	<a href="{{url('createguest')}}" class="btn btn-primary btn-lg"> Guest</a>
+					  	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signUp">
+  							Sign Up
+						</button>
 				</div>	  
 			</div>    
 		</div>
 	 </header>
-	  
-	  
+<!-- SIGN UP
+	   ================================================== -->	  
+	  <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Daftar</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" role="form">
+						  <div class="form-group">
+							<label>Email :</label>
+						  </div>
+						  <div class="form-group">
+							<input type="email" class="form-control" id="exampleInputEmail2">
+						  </div>
+						  <div class="form-group">
+							<label>Password :</label>
+						  </div>
+						  <div class="form-group">
+						    <input type="password" class="form-control" id="exampleInputPassword2">
+						  </div>
+						   <div class="form-group">
+							<label>Confirm Password :</label>
+						  </div>
+						  <div class="form-group">
+						    <input type="password" class="form-control" id="exampleInputPassword2">
+						  </div>
+						  <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+						</form>
+      </div>
+    </div>
+  </div>
+</div>
 	  <!-- PURCHASE
 	      ================================================== -->
 	  <section class="purchase">

@@ -20,6 +20,9 @@
 // });
 
 Route::get('/', 'HomeController@getLanding');
+
+Route::resource('sessions', 'SessionController');
+Route::get('createguest','SessionController@createGuest');
 // //Group nya dibuka kalau udah bisa buat Login
 // Route::group(array('before' => 'admin'), function()
 // {
