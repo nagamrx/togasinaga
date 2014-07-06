@@ -18,6 +18,10 @@ class HomeController extends BaseController {
 		return View::make('landing.index');
 	}
 
+	public function getIndex(){
+		return View::make('admin.index');
+	}
+
 	// private function newOrderCount(){
 	// 	/* Newest order processing */
 	// 	$orders = Order::all();

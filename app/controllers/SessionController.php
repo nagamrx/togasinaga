@@ -26,7 +26,7 @@ class SessionController extends BaseController {
 			}
 			else {
 				if(Auth::user()->role_id=== 1) { //Admin
-					return View::make('layouts.master');
+					return Redirect::to('admin/dashboard');
 				}
 				else if(Auth::user()->role_id=== 2) { //Pengurus
 					return 'Buat Laman Pengurus';
@@ -41,12 +41,11 @@ class SessionController extends BaseController {
 	public function destroy()
 	{
 		Auth::logout();
-
-		return Redirect::to('login');
+		return Redirect::to('/');
 	}
 
 	public function createGuest(){
 		Session::put('role','guest');
-		return 'Terbuatlah sebuah '.Session::get('role');
+		return Redirect::to('guest');
 	}
 }

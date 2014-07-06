@@ -43,18 +43,18 @@ Route::filter('auth', function()
 		}
 		else
 		{
-			return Redirect::guest('login');
+			return Redirect::guest('/');
 		}
 	}
 });
 
 Route::filter('admin', function()
 {
-	if (Auth::guest()) return Redirect::guest('login');
-	/*
-	if (Auth::user()->role != "admin") 
+	if (Auth::guest()) return Redirect::guest('/');
+	
+	if (Auth::user()->role_id != 1) 
 		return Redirect::to('/');
-	*/
+	
 });
 
 
@@ -76,8 +76,14 @@ Route::filter('auth.basic', function()
 
 Route::filter('guest', function()
 {
-	//if (Auth::check()) 
-	return Redirect::to('/');
+	if (!Session::has('role')) {
+	    return Redirect::to('/');
+	}
+	else {
+		if(Session::get('role')!= 'guest'){
+		return Redirect::to('/');		
+		}
+	}
 });
 
 /*

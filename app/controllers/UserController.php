@@ -6,20 +6,18 @@ class UserController extends BaseController {
     {
         $users = User::all();
 
-        return View::make('users.index', array('users' => $users));
+        return View::make('admin.users.index', array('users' => $users));
     }
 
     public function getView($id){
         $user = User::find($id);
-        $orders = Order::where('user_id',$id)->get();
-        $reviews = Review::where('user_id',$id)->get();
-
-        return View::make('users.view', array('user'=>$user,'orders'=>$orders,'reviews'=>$reviews));
+        
+        return View::make('admin.users.view', array('user'=>$user,'orders'=>$orders,'reviews'=>$reviews));
     }
     public function getCreate()
     {
     	$user = new User();
-    	return View::make('users.form')->with('user', $user);
+    	return View::make('admin.users.form')->with('user', $user);
     }
 
     public function postCreate() {
@@ -57,7 +55,7 @@ class UserController extends BaseController {
     public function getUpdate($id) {
         $user = User::find($id);
         if ($user == null) return App::abort(404);
-        return View::make('users.form')->with('user', $user);
+        return View::make('admin.users.form')->with('user', $user);
     }
 
     public function postUpdate($id) {
@@ -93,11 +91,6 @@ class UserController extends BaseController {
         if ($user == null) return App::abort(404);
         $user->delete();
         return Redirect::to('admin/user');
-    }
-
-    public function getReview(){
-        $reviews = Review::all();
-        return View::make('users.listreview')->with('reviews',$reviews);
     }
 
     public function getActivate($id){

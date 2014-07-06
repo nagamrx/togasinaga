@@ -10,55 +10,55 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-// Route::get('/', function(){
-// 	//if(Auth::check()){
-// 	//	return Redirect::to('admin/user/index');
-// 	//} else {
-// 		return Redirect::to('landing');
-// 	//}
-	
-// });
 
 Route::get('/', 'HomeController@getLanding');
 
 Route::resource('sessions', 'SessionController');
 Route::get('createguest','SessionController@createGuest');
-// //Group nya dibuka kalau udah bisa buat Login
-// Route::group(array('before' => 'admin'), function()
-// {
-// 	Route::get('admin', function(){
-// 		return Redirect::to('admin/user/index');
-// 	});
-// 	Route::controller('admin/home', 'HomeController');
-// 	Route::controller('admin/user', 'UserController');
-// });
+
+ Route::group(array('before' => 'admin'), function()
+ {
+ 	Route::get('admin', function(){
+ 		return Redirect::to('admin/dashboard');
+ 	});
+ 	Route::controller('admin/dashboard', 'HomeController');
+ 	Route::controller('admin/user', 'UserController');
+ 	Route::controller('admin/contactmessage', 'ContactMessageController');
+ 	Route::controller('admin/news', 'NewsController');
+ });
+
+ Route::group(array('before' => 'guest'), function()
+ {
+ 	//Route::get('guest/', 'GuestController@getIndex');
+ 	Route::controller('guest','GuestController');
+
+ });
 
 // Route::get('search/{q}', 'HomeController@search');
 
-// Route::get('login', 'SessionController@create');
-// Route::get('logout', 'SessionController@destroy');
 
-// Route::resource('sessions', 'SessionController');
+Route::get('logout', 'SessionController@destroy');
 
-// HTML::macro('nav_link', function($route, $text) {
 
-// 	$link = explode('/', Request::path());
-// 	if ($link[1] == $route)
-// 		$active = "class = 'active'";
-// 	else
-// 		$active = '';
-//   	return '<li '.$active.'><a href="'.url('admin/'.$route.'/index').'">'.$text.'</a></li>';
-// });
+HTML::macro('nav_link', function($route, $text) {
 
-// HTML::macro('nav_menu', function($route, $text) {
+ 	$link = explode('/', Request::path());
+ 	if ($link[1] == $route)
+ 		$active = "class = 'active'";
+ 	else
+ 		$active = '';
+   	return '<li '.$active.'><a href="'.url('admin/'.$route.'/index').'">'.$text.'</a></li>';
+ });
+
+ HTML::macro('nav_menu', function($route, $text) {
 	
-// 	if(Request::is("*/".$route."/*") || Request::is("*/".$route)){
-// 		$active = "class = 'active'";
-// 	} else {
-// 		$active = '';
-// 	}
-//   	return '<li '.$active.'><a href="'.url('admin/'.$route).'">'.$text.'</a></li>';
-// });
+ 	if(Request::is("*/".$route."/*") || Request::is("*/".$route)){
+ 		$active = "class = 'active'";
+ 	} else {
+ 		$active = '';
+ 	}
+   	return '<li '.$active.'><a href="'.url('guest/'.$route).'">'.$text.'</a></li>';
+ });
 
 
 //Testing
