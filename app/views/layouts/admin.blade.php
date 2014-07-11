@@ -64,7 +64,9 @@
 					  <a href="{{url('admin/user')}}"><li class="list-group-item">User</li></a>
 					  <a href="{{url('admin/contactmessage')}}"><li class="list-group-item">Contact Message</li></a>
 					  <a href="{{url('admin/news')}}"><li class="list-group-item">News</li></a>
-					  <li class="list-group-item">Porta ac consectetur ac</li>
+					  <a href="{{url('admin/forum')}}"><li class="list-group-item">Forums</li></a>
+					  <a href="{{url('admin/discussion')}}"><li class="list-group-item">Discussions</li></a>
+					  <a href="{{url('admin/discussioncomment')}}"><li class="list-group-item">Discussion Comments</li></a>
 					  <li class="list-group-item">Vestibulum at eros</li>
 					</ul>
 				</div>

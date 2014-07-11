@@ -9,7 +9,7 @@
 @foreach($news as $ne)
 <div class="row">
 <h3>{{$ne->title}}</h3><br>
-<h6>{{$ne->user_id}}</h6><br>
+<h6>Posted By: {{User::find($ne->user_id)->first_name}} {{User::find($ne->user_id)->last_name}}</h6><br>
 <p>{{$ne->content}}</p>
 </div>
 @endforeach

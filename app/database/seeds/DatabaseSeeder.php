@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('UsersTableSeeder');
 		$this->call('NewsTableSeeder');
+		$this->call('ForumsTableSeeder');
+		$this->call('DiscussionsTableSeeder');
 	}
 
 
@@ -162,5 +164,77 @@ Etiam sagittis porta massa a varius. Proin tempor ante sit amet mi rutrum laoree
 				'updated_at' => $date)
 			));
 	}
+}
 
+class ForumsTableSeeder extends Seeder {
+	
+	public function run(){
+		DB::table('forums')->delete();
+		$date = new datetime;
+
+		DB::table('forums')->insert(array(
+			array(
+				'id' => 1,
+				'name'=>'Forum Testing',
+				'moderator_id'=> 1,
+				'description'=>'Forum ini hanya untuk testing saja',
+				'is_public'=>true,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 2,
+				'name'=>'Forum Pengurus',
+				'moderator_id'=> 3,
+				'description'=>'Forum ini hanya untuk Pengurus saja',
+				'is_public'=>false,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 3,
+				'name'=>'Forum Kel. Opung Yogi',
+				'moderator_id'=> 2,
+				'description'=>'Forum ini hanya untuk Keluarga Opung Yogi saja',
+				'is_public'=>false,
+				'created_at' => $date,
+				'updated_at' => $date)
+			));	
+	}
+}
+
+class DiscussionsTableSeeder extends Seeder {
+	
+	public function run(){
+		DB::table('discussions')->delete();
+		$date = new datetime;
+
+		DB::table('discussions')->insert(array(
+			array(
+				'id' => 1,
+				'title'=>'Diskusi Testing',
+				'description'=>'Diskusi ini hanya untuk testing saja',
+				'content'=>'Konten yang sangaaaaat panjang',
+				'host_id'=> 1,
+				'forum_id'=> 1,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 2,
+				'title'=>'Diskusi Pengurus',
+				'description'=>'Diskusi ini hanya untuk Pengurus saja',
+				'content'=>'Diskusi ini hanya untuk Pengurus saja',
+				'host_id'=> 3,
+				'forum_id'=> 2,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 3,
+				'title'=>'Diskusi Keluarga Sinaga',
+				'description'=>'Diskusi ini hanya untuk Keluarga Sinaga saja',
+				'content'=>'Diskusi ini hanya untuk Keluarga Sinaga saja',
+				'host_id'=> 2,
+				'forum_id'=> 3,
+				'created_at' => $date,
+				'updated_at' => $date)
+			));	
+	}
 }

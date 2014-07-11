@@ -25,6 +25,9 @@ Route::get('createguest','SessionController@createGuest');
  	Route::controller('admin/user', 'UserController');
  	Route::controller('admin/contactmessage', 'ContactMessageController');
  	Route::controller('admin/news', 'NewsController');
+ 	Route::controller('admin/forum', 'ForumController');
+ 	Route::controller('admin/discussion', 'DiscussionController');
+ 	Route::controller('admin/discussioncomment', 'DiscussioncommentController');
  });
 
  Route::group(array('before' => 'guest'), function()
@@ -59,41 +62,3 @@ HTML::macro('nav_link', function($route, $text) {
  	}
    	return '<li '.$active.'><a href="'.url('guest/'.$route).'">'.$text.'</a></li>';
  });
-
-
-//Testing
-/*Route::get('setpass', function() {
-	$user = User::find(2);
-	$user->password = Hash::make('hehehe');
-	$user->save();
-	return 'OK!';
-});
-
-Route::get('createdummy', function(){
-	$user = User::find(3);
-	$user->username = 'test';
-	$user->password = Hash::make('test');
-	$user->save();
-	return 'OK!';
-});
-
-Route::get('fixadmin', function(){
-	//harits
-	$user = User::find(1);
-	$user->role = "admin";
-	$user->save();
-
-	//yogi
-	$user = User::find(2);
-	$user->role = "admin";
-	$user->save();
-
-	//test
-	$user = User::find(3);
-	$user->role = "admin";
-	$user->save();
-
-	return "OK!";
-});*/
-
-Route::get('cobalogin', 'CobaController@getCobalogin');
