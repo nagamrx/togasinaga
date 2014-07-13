@@ -67,6 +67,8 @@
 					  <a href="{{url('admin/forum')}}"><li class="list-group-item">Forums</li></a>
 					  <a href="{{url('admin/discussion')}}"><li class="list-group-item">Discussions</li></a>
 					  <a href="{{url('admin/discussioncomment')}}"><li class="list-group-item">Discussion Comments</li></a>
+					  <a href="{{url('admin/blog')}}"><li class="list-group-item">Blogs</li></a>
+					  <a href="{{url('admin/blogpost')}}"><li class="list-group-item">Blog Posts</li></a>
 					  <li class="list-group-item">Vestibulum at eros</li>
 					</ul>
 				</div>

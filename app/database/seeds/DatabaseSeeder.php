@@ -15,6 +15,9 @@ class DatabaseSeeder extends Seeder {
 		$this->call('NewsTableSeeder');
 		$this->call('ForumsTableSeeder');
 		$this->call('DiscussionsTableSeeder');
+		$this->call('DiscussionCommentsTableSeeder');
+		$this->call('BlogsTableSeeder');
+		$this->call('BlogPostsTableSeeder');
 	}
 
 
@@ -233,6 +236,133 @@ class DiscussionsTableSeeder extends Seeder {
 				'content'=>'Diskusi ini hanya untuk Keluarga Sinaga saja',
 				'host_id'=> 2,
 				'forum_id'=> 3,
+				'created_at' => $date,
+				'updated_at' => $date)
+			));	
+	}
+}
+
+class DiscussionCommentsTableSeeder extends Seeder {
+	
+	public function run(){
+		DB::table('discussion_comments')->delete();
+		$date = new datetime;
+
+		DB::table('discussion_comments')->insert(array(
+			array(
+				'id' => 1,
+				'content'=>'Master Comment',
+				'flag'=>0,
+				'parent_id'=>1,
+				'depth'=> 0,
+				'discussion_id'=> 1,
+				'commenter_id'=> 1,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 2,
+				'content'=>'Aku sih Yes Gan!!',
+				'flag'=>0,
+				'parent_id'=>1,
+				'depth'=> 1,
+				'discussion_id'=> 1,
+				'commenter_id'=> 2,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 3,
+				'content'=>'Masa sichhh?',
+				'flag'=>0,
+				'parent_id'=>2,
+				'depth'=> 2,
+				'discussion_id'=> 1,
+				'commenter_id'=> 3,
+				'created_at' => $date,
+				'updated_at' => $date)
+			));	
+	}
+}
+
+class BlogsTableSeeder extends Seeder {
+	
+	public function run(){
+		DB::table('blogs')->delete();
+		$date = new datetime;
+
+		DB::table('blogs')->insert(array(
+			array(
+				'id' => 1,
+				'name'=>'Kata Ontang',
+				'description'=> 'Blog Punya Yogi',
+				'background_image'=> 'blog1.jpg',
+				'blogger_id'=> 1,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 2,
+				'name'=>'Kata Ikuy',
+				'description'=> 'Blog Punya Yuki',
+				'background_image'=> 'blog2.jpg',
+				'blogger_id'=> 2,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 3,
+				'name'=>'Kata Okoy',
+				'description'=> 'Blog Punya Yoko',
+				'background_image'=> 'blog3.jpg',
+				'blogger_id'=> 3,
+				'created_at' => $date,
+				'updated_at' => $date)
+			));	
+	}
+}
+
+class BlogPostsTableSeeder extends Seeder {
+	
+	public function run(){
+		DB::table('blog_posts')->delete();
+		$date = new datetime;
+
+		DB::table('blog_posts')->insert(array(
+			array(
+				'id' => 1,
+				'title'=>'First Post',
+				'description'=> 'Aing Nyoba Ngepost Pertama',
+				'content'=> 'Loreum Ipsum Dan Kawan-kawannya',
+				'blog_id'=> 1,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 2,
+				'title'=>'Second Post',
+				'description'=> 'Masih Tetap Sama Serunya',
+				'content'=> 'Loreum Ipsum Dan Kawan-kawannya',
+				'blog_id'=> 1,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 3,
+				'title'=>'First Post',
+				'description'=> 'Aing Nyoba Ngepost Pertama',
+				'content'=> 'Loreum Ipsum Dan Kawan-kawannya',
+				'blog_id'=> 2,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 4,
+				'title'=>'First Post',
+				'description'=> 'Aing Nyoba Ngepost Pertama',
+				'content'=> 'Loreum Ipsum Dan Kawan-kawannya',
+				'blog_id'=> 3,
+				'created_at' => $date,
+				'updated_at' => $date),
+			array(
+				'id' => 5,
+				'title'=>'First Post',
+				'description'=> 'Aing Nyoba Ngepost Pertama',
+				'content'=> 'Loreum Ipsum Dan Kawan-kawannya',
+				'blog_id'=> 1,
 				'created_at' => $date,
 				'updated_at' => $date)
 			));	

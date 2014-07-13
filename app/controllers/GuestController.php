@@ -16,7 +16,10 @@ class GuestController extends BaseController {
 	*/
 	public function getIndex(){
 		$news = News::all();
-		return View::make('guest.index')->with('news',$news);
+
+		$dcomments = DiscussionComment::orderBy('created_at','desc')->get();
+		$bposts = BlogPost::orderBy('created_at','desc')->get();
+		return View::make('guest.index', array('news'=>$news,'dcomments'=>$dcomments, 'bposts'=>$bposts));
 	}
 
 	public function getReferences(){

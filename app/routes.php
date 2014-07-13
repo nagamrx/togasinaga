@@ -28,11 +28,12 @@ Route::get('createguest','SessionController@createGuest');
  	Route::controller('admin/forum', 'ForumController');
  	Route::controller('admin/discussion', 'DiscussionController');
  	Route::controller('admin/discussioncomment', 'DiscussioncommentController');
+ 	Route::controller('admin/blog', 'BlogController');
+ 	Route::controller('admin/blogpost', 'BlogpostController');
  });
 
  Route::group(array('before' => 'guest'), function()
  {
- 	//Route::get('guest/', 'GuestController@getIndex');
  	Route::controller('guest','GuestController');
 
  });
